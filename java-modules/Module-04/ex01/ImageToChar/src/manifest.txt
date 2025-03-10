@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Built-By: Moad Tellami
+Main-Class: fr/_42/printer/app/Program
+Specification-Version: 1.0.0

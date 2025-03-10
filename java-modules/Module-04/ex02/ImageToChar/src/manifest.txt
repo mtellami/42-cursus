@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: fr/_42/printer/app/Program
+Class-Path: lib/JCDP-2.0.1.jar lib/jcommander-1.82.jar
+Built-By: Moad Tellami
+Specification-Version: 1.0.0

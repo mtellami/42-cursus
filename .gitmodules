@@ -1,0 +1,9 @@
+[submodule "inception"]
+	path = inception
+	url = https://github.com/mtellami/inception
+[submodule "webserv"]
+	path = webserv
+	url = https://github.com/mtellami/http-server
+[submodule "ft_transcendence"]
+	path = ft_transcendence
+	url = https://github.com/mtellami/ft_transcendence

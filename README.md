@@ -35,9 +35,9 @@
 | *[born2beroot][14]*   | 40 Hrs   | System administration   | ![.](https://skillicons.dev/icons?i=linux,bash,)           | 577 XP     | 28-10-2022  |               |
 | *[push_swap][15]*     | 60 Hrs   | C - Sorting algorithms  | ![.](https://skillicons.dev/icons?i=c,,)                   | 1855 XP    | 15-11-2022  |               |
 | *[so_long][16]*       | 60 Hrs   | C - 2D GameDev          | ![.](https://skillicons.dev/icons?i=c,,)                   | 1000 XP    | 24-11-2022  |               |
-| *[pipex][17]*         | 50 Hrs   | C - Pipe                | ![.](https://skillicons.dev/icons?i=c,linux,)              | 1142 XP    | 02-12-2022  |               |
+| *[pipex][17]*         | 50 Hrs   | C - Pipe                | ![.](https://skillicons.dev/icons?i=linux,c,)              | 1142 XP    | 02-12-2022  |               |
 | *[philosophers][18]*  | 70 Hrs   | C - Threads & Processes | ![.](https://skillicons.dev/icons?i=c,,)                   | 3360 XP    | 20-12-2022  |               |
-| *[minishell][19]*     | 210 Hrs  | C - processes & fd      | ![.](https://skillicons.dev/icons?i=c,bash,)               | 2814 XP    | 05-02-2023  |[Abdeljalil Salhi][1]|
+| *[minishell][19]*     | 210 Hrs  | C - processes & fd      | ![.](https://skillicons.dev/icons?i=bash,c,)               | 2814 XP    | 05-02-2023  |[Abdeljalil Salhi][1]|
 | *[net_practice][20]*  | 50 Hrs   | C - Networking          |                                                            | 3160 XP    | 12-02-2023  |               |
 | *[cub3d][21]*         | 280 Hrs  | C - 3D GameDev          | ![.](https://skillicons.dev/icons?i=c,,)                   | 5775 XP    | 20-03-2023  |[Youssef El Idrissi][2]|
 | *[c++ modules][22]*   | 200 Hrs  | C++ programming         | ![.](https://skillicons.dev/icons?i=cpp,,)                 | 19702 XP   | 30-05-2023  |               |
@@ -48,4 +48,4 @@
 |                       |          |                         |                                                            |            |             |               |
 | **Out-core**          |          |                         |                                                            |            |             |               |
 | *[java-modules][23]*  | 70 Hrs   | Java programming        | ![.](https://skillicons.dev/icons?i=java,,)                | 15750 XP   | xx-xx-xx    |               |
-| *[mobile][24]*        | 63 Hrs   | mobile development      | ![.](https://skillicons.dev/icons?i=dart,flutter,,)        | 9450 XP    | xx-xx-xx    |               |
+| *[mobile][24]*        | 63 Hrs   | mobile development      | ![.](https://skillicons.dev/icons?i=dart,flutter,)        | 9450 XP    | xx-xx-xx    |               |

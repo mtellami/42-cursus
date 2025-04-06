@@ -60,7 +60,7 @@
 | *[inception][25]*        | 210 Hrs  | System admin by Docker  | ![.][d]       | 10042 XP   | 21-07-2023  |               |
 | *[inception][26]*        | 210 Hrs  | C++ - HTTP Server       | ![.][cppn]    | 21630 XP   | 30-08-2023  |[Laila][3] [Malika][4]|
 | *[ft_transcendence][27]* | 245 Hrs  | Web development         | ![.][pnr]     | 24360 XP   | 28-10-2023  |[Jawad][5] [Habibi][6] [Mustapha][7] [Issam][8]|
-| *internship*             | 6 month  | Full Stack Developer    | ![.][intern]  | 24360 XP   | 22-12-2024  |               |
+| *internship*             | 6 month  | Full Stack Developer    | ![.][intern]  | 42000 XP   | 22-12-2024  |               |
 | **Out-core**             |          |                         |               |            |             |               |
 | *[java-modules][23]*     | 70 Hrs   | Java programming        | ![.][j]       | 15750 XP   | xx-xx-xx    |               |
 | *[mobile][24]*           | 63 Hrs   | mobile development      | ![.][df]      | 9450 XP    | xx-xx-xx    |               |

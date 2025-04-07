@@ -1,0 +1,33 @@
+import 'package:advanced_weather_app/entities/status.dart';
+import 'package:flutter/material.dart';
+
+final Map<int, Status> weatherStatusMap = {
+  0: Status(description: 'Clear sky', icon: Icons.wb_sunny, ),
+  1: Status(description: 'Mainly clear', icon: Icons.wb_sunny_outlined),
+  2: Status(description: 'Partly cloudy', icon: Icons.wb_cloudy),
+  3: Status(description: 'Overcast', icon: Icons.cloud),
+  45: Status(description: 'Fog', icon: Icons.blur_on),
+  48: Status(description: 'Depositing rime fog', icon: Icons.ac_unit),
+  51: Status(description: 'Light drizzle', icon: Icons.grain),
+  53: Status(description: 'Moderate drizzle', icon: Icons.grain),
+  55: Status(description: 'Dense drizzle', icon: Icons.grain),
+  56: Status(description: 'Light freezing drizzle', icon: Icons.ac_unit),
+  57: Status(description: 'Dense freezing drizzle', icon: Icons.ac_unit),
+  61: Status(description: 'Slight rain', icon: Icons.beach_access),
+  63: Status(description: 'Moderate rain', icon: Icons.beach_access),
+  65: Status(description: 'Heavy rain', icon: Icons.beach_access),
+  66: Status(description: 'Light freezing rain', icon: Icons.ac_unit),
+  67: Status(description: 'Heavy freezing rain', icon: Icons.ac_unit),
+  71: Status(description: 'Slight snow fall', icon: Icons.cloudy_snowing),
+  73: Status(description: 'Moderate snow fall', icon: Icons.cloudy_snowing),
+  75: Status(description: 'Heavy snow fall', icon: Icons.ac_unit),
+  77: Status(description: 'Snow grains', icon: Icons.grain),
+  80: Status(description: 'Slight rain showers', icon: Icons.shower),
+  81: Status(description: 'Moderate rain showers', icon: Icons.shower),
+  82: Status(description: 'Violent rain showers', icon: Icons.shower),
+  85: Status(description: 'Slight snow showers', icon: Icons.ac_unit),
+  86: Status(description: 'Heavy snow showers', icon: Icons.ac_unit),
+  95: Status(description: 'Thunderstorm: Slight or moderate', icon: Icons.thunderstorm),
+  96: Status(description: 'Thunderstorm with slight hail', icon: Icons.flash_on),
+  99: Status(description: 'Thunderstorm with heavy hail', icon: Icons.flash_on),
+};

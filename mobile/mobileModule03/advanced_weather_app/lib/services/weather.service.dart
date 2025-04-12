@@ -19,7 +19,7 @@ class WeatherService {
   static Future<HourlyWeather> getTodayWeather(Geocoding geocoding) async {
     return _getWeather(
       geocoding: geocoding,
-      range: 'hourly',
+      range: 'forecast_days=1&hourly',
       properties: ['temperature_2m', 'wind_speed_10m', 'weather_code'],
       fromJson: HourlyWeather.fromJson,
     );

@@ -26,7 +26,6 @@ class CurrentlyScreen extends StatelessWidget {
           style: TextStyle(
             fontSize: 50,
             fontWeight: FontWeight.bold,
-            color: Colors.white,
           ),
         ),
         const SizedBox(height: 40),
@@ -39,7 +38,7 @@ class CurrentlyScreen extends StatelessWidget {
             const SizedBox(width: 5),
             Text(
               "${weather.values.windSpeed} ${weather.units.windSpeed}",
-              style: TextStyle(fontSize: 30, color: Colors.white),
+              style: TextStyle(fontSize: 30),
             )
           ],
         )

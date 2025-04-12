@@ -1,7 +1,8 @@
+import 'package:advanced_weather_app/widgets/glass_container.dart';
+import 'package:advanced_weather_app/widgets/temperature_chart.dart';
+import 'package:advanced_weather_app/widgets/header.dart';
+import 'package:advanced_weather_app/widgets/today_weather_list.dart';
 import 'package:flutter/material.dart';
-import 'package:advanced_weather_app/constants/utils.dart';
-import 'package:advanced_weather_app/entities/geocoding.dart';
-import 'package:advanced_weather_app/entities/weather.dart';
 import 'package:advanced_weather_app/providers/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -10,50 +11,36 @@ class TodayScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppProvider state = Provider.of<AppProvider>(context);
+    final state = Provider.of<AppProvider>(context);
+    final location = state.location;
+    final weather = state.hourlyWeather;
 
-    Geocoding? location = state.location;
-    HourlyWeather? weather = state.hourlyWeather;
     if (location == null || weather == null) {
       return const Center(child: CircularProgressIndicator());
     }
 
     return Column(
       children: [
-        Expanded(
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 30.0),
-            child: ListView.builder(
-              itemCount: weather.values.length,
-              itemBuilder: (context, index) => _buildRow([
-                AppUtils.formatTime(weather.values[index].timestamp),
-                [
-                  weather.values[index].temperature.$1.toStringAsFixed(1),
-                  weather.units.temperature,
-                ].join(' '),
-                [
-                  weather.values[index].windSpeed,
-                  weather.units.windSpeed,
-                ].join(' ')
-              ]),
+        ScreenHeader(location: location),
+        const SizedBox(height: 60),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 10),
+          child: GlassContainer(
+            child: TemperatureChart(
+              title: "Today temperature",
+              timestamps: weather.values.map((e) => e.timestamp).toList(),
+              temperatures: weather.values.map((v) => v.temperature).toList(),
+              colors: (Colors.orangeAccent, null),
+              unit: weather.units.temperature,
             ),
           ),
+        ),
+        const SizedBox(height: 60),
+        SizedBox(
+          height: 150,
+          child: TodayWeatherList(weather: weather),
         )
       ],
-    );
-  }
-
-  Widget _buildRow(List<String> columns) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List<Text>.generate(
-        columns.length,
-        (index) => Text(
-          columns[index],
-          style: TextStyle(fontSize: 26),
-          textAlign: TextAlign.center,
-        ),
-      ),
     );
   }
 }

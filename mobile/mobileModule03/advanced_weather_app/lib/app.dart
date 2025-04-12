@@ -1,3 +1,4 @@
+import 'package:advanced_weather_app/constants/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:advanced_weather_app/interceptors/interceptor.dart';
 import 'package:advanced_weather_app/screens/currently.screen.dart';
@@ -44,6 +45,7 @@ class AppState extends State<App> with SingleTickerProviderStateMixin {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.themeData,
       home: Stack(
         children: [
           Positioned.fill(

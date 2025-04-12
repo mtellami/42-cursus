@@ -27,7 +27,6 @@ class ScreenHeader extends StatelessWidget {
             "${location.region}, ${location.country}",
             style: const TextStyle(
               fontSize: 25,
-              color: Colors.white,
             ),
           ),
         ],

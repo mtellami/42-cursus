@@ -7,7 +7,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (_) => AppProvider(),
-      child: App(),
+      child: const App(),
     ),
   );
 }

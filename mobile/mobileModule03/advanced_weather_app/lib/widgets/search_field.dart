@@ -27,7 +27,11 @@ class SearchField extends StatelessWidget {
             decoration: InputDecoration(
               prefixIcon: Padding(
                 padding: const EdgeInsets.only(bottom: 8),
-                child: Icon(Icons.search, color: Colors.white, size: 20),
+                child: Icon(
+                  Icons.search,
+                  size: 20,
+                  color: Colors.white,
+                ),
               ),
               hintText: "Search location...",
               hintStyle: TextStyle(color: Colors.white60),
@@ -88,11 +92,15 @@ class SearchField extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(Icons.location_city),
+            const Icon(Icons.location_city, color: Colors.black,),
             const SizedBox(width: 10),
             Text(
               option.name as String,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+                color: Colors.black,
+              ),
             ),
             const SizedBox(width: 4),
             Text(

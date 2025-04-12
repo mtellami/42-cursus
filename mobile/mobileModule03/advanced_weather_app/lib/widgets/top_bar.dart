@@ -1,3 +1,4 @@
+import 'package:advanced_weather_app/constants/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:advanced_weather_app/widgets/geolocation.dart';
 import 'package:advanced_weather_app/widgets/search_field.dart';
@@ -8,6 +9,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      iconTheme: AppTheme.iconTheme,
       backgroundColor: Colors.transparent,
       elevation: 0,
       title: Row(
@@ -15,11 +17,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
           SearchField(),
           const SizedBox(
             height: 24,
-            child: VerticalDivider(
-              color: Colors.white,
-              thickness: 2,
-              width: 16,
-            ),
+            child: VerticalDivider(thickness: 2, width: 16),
           ),
           Geolocation(),
         ],

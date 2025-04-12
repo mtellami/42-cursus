@@ -18,16 +18,9 @@ class WeatherStatus extends StatelessWidget {
       children: [
         Text(
           status.description,
-          style: TextStyle(
-            fontSize: 25,
-            color: Colors.white,
-          ),
+          style: TextStyle(fontSize: 25),
         ),
-        Icon(
-          status.icon,
-          color: Colors.white,
-          size: 100,
-        )
+        Icon(status.icon, size: 100)
       ],
     );
   }

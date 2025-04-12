@@ -43,7 +43,7 @@
 
 | Project                  | Hours  | Topic                   | Tech      | Exp   |  Finished  |     Team      |
 | ------------------------ |-------:| ----------------------- | --------- | ----- | ---------- | ------------- |
-| *[Pool][10]*             | 01 Mn  | Shell, C programming    | ![.][cbg] | 000   | 12-08-2022 |               |
+| *[Pool][10]*             | 01 Mo  | Shell, C programming    | ![.][cbg] | 000   | 12-08-2022 |               |
 | **Common core**          |        |                         |           |       |            |               |
 | *[libft][11]*            | 70 Hr  | C - Libraries           | ![.][c]   | 462   | 15-10-2022 |               |
 | *[ft_printf][12]*        | 70 Hr  | C - Variadic functions  | ![.][c]   | 882   | 16-10-2022 |               |

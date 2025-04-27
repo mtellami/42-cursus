@@ -1,3 +1,4 @@
+import 'package:diary_app/screens/login.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -7,8 +8,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Diary app',
-      home: const Center(
-        child: Text("Diary app"),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: const Login(),
       ),
     );
   }

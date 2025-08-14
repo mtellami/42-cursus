@@ -48,8 +48,8 @@ def main():
     if len(sys.argv) != 2:
         raise AssertionError("the arguments are bad")
     text = sys.argv[1]
-    morse_list = []
 
+    morse_list = []
     for char in text:
         upper_char = char.upper()
         if upper_char not in NESTED_MORSE:

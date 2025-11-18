@@ -8,7 +8,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     try:
         if not isinstance(start, int) or not isinstance(end, int):
             raise TypeError("start and end must be integers")
-        arr = np.array(family, dtype=object)
+        arr = np.array(family)
         if arr.ndim != 2:
             raise ValueError("family must be a rectangular 2D list")
         print(f"My shape is : {arr.shape}")

@@ -13,21 +13,18 @@ def main():
         print(f"The shape of image is: {array.shape}")
         print(array)
 
-        transposed = np.zeros((array.shape[1], array.shape[0]))
-        # iterate through rows
-        for i in range(array.shape[0]):
-            # iterate through columns
-            for j in range(array.shape[1]):
-                transposed[j][i] = array[i][j]
+        rotated = np.stack(array, axis=1)
+        print(f"New shape after Transpose: {rotated.shape}")
+        print(rotated)
 
-        print(f"New shape after Transpose: {transposed.shape}")
-        print(array)
-
-        plt.imshow(transposed, cmap="gray")
+        plt.imshow(rotated, cmap="gray")
         plt.show()
     except Exception as err:
         exit(f"Exception: {err}")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        exit(1)

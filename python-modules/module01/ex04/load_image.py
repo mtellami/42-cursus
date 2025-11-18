@@ -3,6 +3,9 @@ import numpy as np
 
 
 def ft_zoom(image: Image.Image) -> np.ndarray:
+    """
+    Crop a 400px rectangle from an image, convert it into grayscale.
+    """
     img = image.crop((450, 100, 850, 500)).convert("L")
     return np.array(img)
 

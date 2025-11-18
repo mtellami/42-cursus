@@ -23,11 +23,13 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         return []
 
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(
+    height: list[int | float], weight: list[int | float]
+) -> list[int | float]:
     """Compute BMI from weight and height lists"""
     try:
         if not is_numbers_list(height) or not is_numbers_list(weight):
-            raise TypeError("Height and weight must be lists of ints or floats")
+            raise TypeError("Height and weight must be lists of numbers")
         h = np.array(height, dtype=float)
         w = np.array(weight, dtype=float)
         if h.size != w.size:

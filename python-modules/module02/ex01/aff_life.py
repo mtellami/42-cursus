@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 
 
 def visualize(x, y):
+    """
+    Visualze the csv file data using matplot
+    """
     plt.plot(x, y)
     plt.xlabel("Year")
     plt.ylabel("Life Expectancy")
@@ -24,7 +27,6 @@ def main():
 
         years = data.index.astype(int)
         values = data.values
-        # TODO: Check if years and values are valid for plt to visualize
 
         visualize(years, values)
     except Exception as e:

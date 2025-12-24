@@ -23,7 +23,9 @@ def main():
     """
     Does something
     """
-    income_df = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+    income_df = load(
+        "income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
+    )
     life_df = load("life_expectancy_years.csv")
 
     gdp_1900 = income_df["1900"].tolist()

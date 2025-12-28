@@ -4,23 +4,22 @@ from S1E7 import Baratheon, Lannister
 class King(Baratheon, Lannister):
     """Class representing king"""
 
-    eyes: str
-    hairs: str
+    def __init__(self, first_name, is_alive=True):
+        """Class King Constructor."""
+        super().__init__(first_name, is_alive)
 
-    def __init__(self, first_name):
-        super().__init__(first_name)
-
-    def die(self):
-        return super().die()
-
-    def set_eyes(self, eyes: str):
+    def set_eyes(self, eyes):
+        """eyes setter method"""
         self.eyes = eyes
 
-    def get_eyes(self) -> str:
+    def get_eyes(self):
+        """eyes getter method"""
         return self.eyes
 
     def set_hairs(self, hairs):
+        """hairs setter method"""
         self.hairs = hairs
 
     def get_hairs(self):
+        """hairs getter method"""
         return self.hairs

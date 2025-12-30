@@ -30,7 +30,7 @@ def std(numbers, n):
 
 
 def ft_statistics(*args, **kwargs) -> None:
-    """Compute and print statistical measures for a list of numeric arguments."""
+    """Compute statistical measures for a list of numeric arguments."""
     try:
         numbers = sorted([float(x) for x in args])
         n = len(numbers)

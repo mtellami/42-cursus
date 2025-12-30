@@ -1,31 +1,39 @@
+def mean(numbers, n):
+    """Compute the arithmetic mean of a list of numbers."""
+    return sum(numbers) / n
+
+
+def median(numbers, n):
+    """Compute the median of a list of numbers."""
+    mid = n // 2
+    if n % 2 == 0:
+        res = (numbers[mid - 1] + numbers[mid]) / 2
+    else:
+        res = numbers[mid]
+    return int(res)
+
+
+def quartile(numbers, n):
+    """Compute the first and third quartiles of a list of numbers."""
+    return [numbers[int(n * 0.25)], numbers[int(n * 0.75)]]
+
+
+def variance(numbers, n):
+    """Compute the population variance of a list of numbers."""
+    m = mean(numbers, n)
+    return sum((x - m) ** 2 for x in numbers) / n
+
+
+def std(numbers, n):
+    """Compute the population standard deviation of a list of numbers."""
+    return variance(numbers, n) ** 0.5
+
+
 def ft_statistics(*args, **kwargs) -> None:
+    """Compute and print statistical measures for a list of numeric arguments."""
     try:
-        if len(args) == 0:
-            print("ERROR")
-            return
-
-        numbers = [float(x) for x in args]
+        numbers = sorted([float(x) for x in args])
         n = len(numbers)
-        numbers.sort()
-
-        def mean():
-            return sum(numbers) / n
-
-        def median():
-            mid = n // 2
-            if n % 2 == 0:
-                return (numbers[mid - 1] + numbers[mid]) / 2
-            return numbers[mid]
-
-        def quartile():
-            return [numbers[int(n * 0.25)], numbers[int(n * 0.75)]]
-
-        def variance():
-            m = mean()
-            return sum((x - m) ** 2 for x in numbers) / n
-
-        def std():
-            return variance() ** 0.5
 
         ops = {
             "mean": mean,
@@ -35,15 +43,12 @@ def ft_statistics(*args, **kwargs) -> None:
             "std": std,
         }
 
-        printed = False
-
         for value in kwargs.values():
             if value in ops:
-                print(f"{value} : {ops[value]()}")
-                printed = True
-
-        if not printed:
-            print("ERROR")
+                if len(numbers):
+                    print(f"{value} : {ops[value](numbers, n)}")
+                else:
+                    print("ERROR")
 
     except Exception:
         print("ERROR")

@@ -23,10 +23,11 @@
 [21]: https://github.com/mtellami/42-cursus/tree/main/cub3d
 [22]: https://github.com/mtellami/42-cursus/tree/main/c%2B%2B
 [23]: https://github.com/mtellami/42-cursus/tree/main/java-modules
-[24]: https://github.com/mtellami/42-cursus/tree/main/mobile
+[24]: https://github.com/mtellami/42-cursus/tree/main/mobile-modules
 [25]: https://github.com/mtellami/inception
 [26]: https://github.com/mtellami/http-server
 [27]: https://github.com/mtellami/ft_transcendence
+[28]: https://github.com/mtellami/python-modules
 
 [c]: https://skillicons.dev/icons?i=c,,
 [cbg]: https://skillicons.dev/icons?i=c,bash,git
@@ -40,6 +41,7 @@
 [in]: https://skillicons.dev/icons?i=mongodb,nestjs,angular
 [j]: https://skillicons.dev/icons?i=java,spring,
 [df]: https://skillicons.dev/icons?i=dart,flutter,
+[p]: https://skillicons.dev/icons?i=python
 
 | Project                  | Hours  | Topic                   | Tech      | Exp   |  Finished  |     Team      |
 | ------------------------ |-------:| ----------------------- | --------- | ----- | ---------- | ------------- |
@@ -62,5 +64,6 @@
 | *[ft_transcendence][27]* | 245 Hr | Web development         | ![.][pnr] | 24360 | 28-10-2023 |[Jawad][5] [Habibi][6] [Mustapha][7] [Issam][8]|
 | *internship*             | 06 Mo  | Full Stack Developer    | ![.][in]  | 42000 | 22-12-2024 |               |
 | **Out-core**             |        |                         |           |       |            |               |
+| *[python-modules][23]*   | xx Hr  | python for data science | ![.][p]   | xxxxx | 31-12-2025 |               |
 | *[java-modules][23]*     | 70 Hr  | Java programming        | ![.][j]   | 15750 | xx-xx-xx   |               |
-| *[mobile][24]*           | 63 Hr  | mobile development      | ![.][df]  | 9450  | xx-xx-xx   |               |
+| *[mobile_modules][24]*   | 63 Hr  | mobile development      | ![.][df]  | 9450  | xx-xx-xx   |               |

@@ -70,11 +70,3 @@
 | *[python-modules][23]*   | xx Hr  | python for data science | ![.][p]   | xxxxx | 31-12-2025 |               |
 | *[java-modules][23]*     | 70 Hr  | Java programming        | ![.][j]   | 15750 | xx-xx-xx   |               |
 | *[mobile_modules][24]*   | 63 Hr  | mobile development      | ![.][df]  | 9450  | xx-xx-xx   |               |
-| *ft_hangouts*            | xx Hr  | mobile development      | ![.][df]  | xxxx  | xx-xx-xx   |               |
-| *swifty-companion*       | xx Hr  | mobile development      | ![.][df]  | xxxx  | xx-xx-xx   |               |
-| *camagru*                | xx Hr  | web development         | ![.][web] | xxxx  | xx-xx-xx   |               |
-| *matcha*                 | xx Hr  | web development         | ![.][web] | xxxx  | xx-xx-xx   |               |
-| *darkly*                 | xx Hr  | web development         | ![.][web] | xxxx  | xx-xx-xx   |               |
-| *music-room*             | xx Hr  | web & mobile dev        | ![.][full]| xxxx  | xx-xx-xx   |               |
-| *inception-of-things*    | xx Hr  | devops                  | ![.][ops] | xxxx  | xx-xx-xx   |               |
-| *cloud-1*                | xx Hr  | devops                  | ![.][ops] | xxxx  | xx-xx-xx   |               |

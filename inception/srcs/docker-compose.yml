@@ -1,0 +1,143 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:42
+    build:
+      context: ./requirements/nginx
+      dockerfile: Dockerfile
+    depends_on:
+      - wordpress
+    volumes:
+      - wordpress:/var/www/wordpress
+    ports:
+      - "443:443"
+    networks:
+      - inception
+    env_file:
+      - .env
+    restart: always
+  wordpress:
+    container_name: wordpress
+    image: wordpress:42
+    build:
+      context: ./requirements/wordpress
+      dockerfile: Dockerfile
+    depends_on:
+      - mariadb
+    volumes:
+      - wordpress:/var/www/wordpress
+    networks:
+      - inception
+    ports:
+       - "9000:9000"
+    env_file:
+      - .env
+    restart: always
+  mariadb:
+    container_name: mariadb
+    image: mariadb:42
+    build:
+      context: ./requirements/mariadb
+      dockerfile: Dockerfile
+    volumes:
+      - mariadb:/var/lib/mysql
+    networks:
+      - inception
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    restart: always
+  
+  redis:
+    container_name: redis
+    image: redis:42
+    build:
+      context: ./requirements/bonus/redis
+      dockerfile: Dockerfile
+    networks:
+      - inception
+    ports:
+      - "6379:6379"
+    restart: always
+  ftp:
+    container_name: ftp
+    image: ftp:42
+    build:
+      context: ./requirements/bonus/ftp
+      dockerfile: Dockerfile
+    volumes:
+      - wordpress:/var/www/html
+    depends_on:
+      - wordpress
+    networks:
+      - inception
+    ports:
+      - "21:21"
+      - "1024-1048:1024-1048"
+    restart: always
+  adminer:
+    container_name: adminer
+    image: adminer:42
+    build:
+      context: ./requirements/bonus/adminer
+      dockerfile: Dockerfile
+    depends_on:
+      - mariadb
+    volumes:
+      - wordpress:/var/www/wordpress
+    ports:
+      - "7000:7000"
+    networks:
+      - inception
+    restart: always
+  cadvisor:
+    container_name: cadvisor
+    image: cadvisor:42
+    build:
+      context: ./requirements/bonus/cadvisor
+      dockerfile: Dockerfile
+    networks:
+      - inception
+    ports:
+      - "8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro 
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    restart: always
+  website:
+    container_name: website
+    image: website:42
+    build:
+      context: ./requirements/bonus/website
+      dockerfile: Dockerfile
+    networks:
+      - inception
+    ports:
+      - "4000:4000"
+    restart: always
+
+
+volumes:
+  mariadb:
+    name: mariadb
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mtellami/data/mariadb
+  wordpress:
+    name: wordpress
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mtellami/data/wordpress
+
+networks:
+  inception:
+    driver: bridge

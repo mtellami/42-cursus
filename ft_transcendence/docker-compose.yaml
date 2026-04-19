@@ -1,0 +1,80 @@
+version: "3.8"
+
+# docker compose for production mode
+services:
+  api:
+    container_name: api
+    image: api:pong
+    build:
+      context: backend
+      target: production
+    volumes:
+      - avatar-images:/home/node/avatar-images
+    networks:
+      - pingpong
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASS}@postgres:5432/${DB_NAME}
+    depends_on:
+      - postgres
+    restart: always
+    init: true
+
+  frontend:
+    container_name: frontend
+    image: frontend:pong
+    build:
+      context: frontend
+      target: production
+      args:
+        - REACT_APP_FORTY_TWO_API_URI=${FORTY_TWO_API_URI}
+        - REACT_APP_HOST_URI=${HOST_URI}
+    networks:
+      - pingpong
+    depends_on:
+      - api
+    init: true
+
+  nginx:
+    container_name: nginx
+    image: nginx:pong
+    build:
+      context: nginx
+      target: production
+    volumes:
+      - avatar-images:/home/nginx/avatar-images
+    networks:
+      - pingpong
+    ports:
+      - 3000:80
+    depends_on:
+      - api
+      - frontend
+    restart: always
+    init: true
+
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    restart: always
+    networks:
+      - pingpong
+    volumes:
+      - postgres:/database_files
+    environment:
+      - PGDATA=/database_files
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+
+networks:
+  pingpong:
+    name: pingpong
+    driver: bridge
+
+volumes:
+  postgres:
+    name: postgres
+  avatar-images:
+    name: avatar-images

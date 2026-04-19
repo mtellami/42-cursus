@@ -1,0 +1,10 @@
+.input {
+    /* font-size: 50px; */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    background: #6d7081;
+    
+    /* The outline will be the outer circle */
+    accent-color : #6d7081;
+}

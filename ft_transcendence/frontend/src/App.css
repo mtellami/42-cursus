@@ -1,0 +1,34 @@
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&family=Tajawal:wght@200&display=swap'); */
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+html,
+body,
+.app,
+#root {
+    /* height: 0%; */
+    @apply text-gray-20;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.fixed-height {
+    height: 780px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #53576f;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}

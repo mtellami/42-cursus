@@ -1,0 +1,127 @@
+
+.board {
+    position: fixed;
+    top:75%;
+    left:57%;
+    transform:translate(-50%,-50%);
+}
+  
+.bat {
+    height:8px;
+    width:50px;
+    background: #484c61;
+    position: absolute;
+    z-index: 2;
+}
+  
+.ball {
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#CDCFD7;
+    position:absolute;
+    animation: bounce 3s infinite;
+    transform: translate(18px, 0px);
+    z-index: 2;
+}
+  
+  
+.back {
+      width: 100px;
+      height: 100px;
+      background:#7A7E94;
+      border-radius: 50px;
+    transform: translate(-25px, -50px);
+    z-index: 1;
+}
+  
+@keyframes bounce {
+    0% {
+      top:-75px;
+      animation-timing-function: ease-in;
+    }
+    5% {
+      top:-15px;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      top:-65px;
+      animation-timing-function: ease-in;
+    }
+    15% {
+      top:-15px;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      top:-55px;
+      animation-timing-function: ease-in;
+    }
+    25% {
+      top:-15px;
+      animation-timing-function: ease-out;
+      opacity: .7;
+    }
+    30% {
+      top:-45px;
+      animation-timing-function: ease-in;
+      opacity: .7;
+    }
+    35% {
+      top:-15px;
+      animation-timing-function: ease-out;
+      opacity: .6;
+    }
+    40% {
+      top:-35px;
+      animation-timing-function: ease-in;
+      opacity: .6;
+    }
+    45% {
+      top:-15px;
+      opacity: .5;
+    }
+    50% {
+      top:-25px;
+      opacity: .5;
+    }
+    55% {
+      top:-15px;
+      opacity: .4;
+    }
+    60% {
+      top:-20px;
+      opacity: .4;
+    }
+    65% {
+      top:-15px;
+      opacity: .3;
+    }
+    70% {
+      top:-18px;
+      opacity: .3;
+    }
+    75% {
+      top:-15px;
+      opacity: .2;
+    }  
+    80% {
+      top:-17px;
+      opacity: .2;
+    }
+    85% {
+      top:-15px;
+      opacity: .1;
+    }
+    90% {
+      top:-16px;
+      opacity: .1;
+    }
+    95% {
+      top:-15px;
+      opacity: .05;
+    }
+    100% {
+      top:-15px;
+      opacity: 0;
+    }
+}
